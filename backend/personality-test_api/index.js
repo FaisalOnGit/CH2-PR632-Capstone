@@ -8,8 +8,14 @@ app.use(cors());
 
 // Assuming data.json is in the same directory as index.js
 const data = require("./data.json");
-const { questions, personalityDescriptions, responseScale, famousPeople } =
-  data;
+const {
+  questions,
+  personalityDescriptions,
+  responseScale,
+  famousPeople,
+  title,
+  gambar,
+} = data;
 
 app.use(bodyParser.json());
 
@@ -60,11 +66,15 @@ app.post("/calculate-personality", (req, res) => {
   const userPersonality = calculatePersonality(userResponses);
   const personalityDescription = personalityDescriptions[userPersonality];
   const famousPeopleList = famousPeople[userPersonality];
+  const personalityTitle = title[userPersonality];
+  const personalityImage = gambar[userPersonality];
 
   res.json({
     personality: userPersonality,
+    title: personalityTitle,
     description: personalityDescription,
     famousPeople: famousPeopleList,
+    image: personalityImage,
   });
 });
 

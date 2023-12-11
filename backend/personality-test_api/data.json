@@ -85,5 +85,41 @@
     "ESFJ": ["Pope Francis", "Jennifer Garner", "Taylor Swift"],
     "ENFJ": ["Barack Obama", "Oprah Winfrey", "Martin Luther King Jr."],
     "ENTJ": ["Steve Jobs", "Margaret Thatcher", "Bill Gates"]
+  },
+  "title": {
+    "ISTJ": ["The Inspector"],
+    "ISFJ": ["The Protector"],
+    "INFJ": ["The Advocate"],
+    "INTJ": ["The Architect"],
+    "ISTP": ["The Crafter"],
+    "ISFP": ["The Artist"],
+    "INFP": ["The Mediator"],
+    "INTP": ["The Thinker"],
+    "ESTP": ["The Entrepreneur"],
+    "ESFP": ["The Performer"],
+    "ENFP": ["The Campaigner"],
+    "ENTP": ["The Debater"],
+    "ESTJ": ["The Executive"],
+    "ESFJ": ["The Caregiver"],
+    "ENFJ": ["The Protagonist"],
+    "ENTJ": ["The Commander"]
+  },
+  "gambar": {
+    "ISTJ": ["https://storage.cloud.google.com/img-mbti/img/ISTJ.png"],
+    "ISFJ": ["https://storage.cloud.google.com/img-mbti/img/ISFJ.png"],
+    "INFJ": ["https://storage.cloud.google.com/img-mbti/img/INFJ.png"],
+    "INTJ": ["https://storage.cloud.google.com/img-mbti/img/INTJ.png"],
+    "ISTP": ["https://storage.cloud.google.com/img-mbti/img/ISTP.png"],
+    "ISFP": ["https://storage.cloud.google.com/img-mbti/img/ISFP.png"],
+    "INFP": ["https://storage.cloud.google.com/img-mbti/img/INFP.png"],
+    "INTP": ["https://storage.cloud.google.com/img-mbti/img/INTP.png"],
+    "ESTP": ["https://storage.cloud.google.com/img-mbti/img/ESTP.png"],
+    "ESFP": ["https://storage.cloud.google.com/img-mbti/img/ESFP.png"],
+    "ENFP": ["https://storage.cloud.google.com/img-mbti/img/ENFP.png"],
+    "ENTP": ["https://storage.cloud.google.com/img-mbti/img/ENTP.png"],
+    "ESTJ": ["https://storage.cloud.google.com/img-mbti/img/ESTJ.png"],
+    "ESFJ": ["https://storage.cloud.google.com/img-mbti/img/ESFJ.png"],
+    "ENFJ": ["https://storage.cloud.google.com/img-mbti/img/ENFJ.png"],
+    "ENTJ": ["https://storage.cloud.google.com/img-mbti/img/ENTJ.png"]
   }
 }

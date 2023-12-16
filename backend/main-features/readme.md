@@ -1,93 +1,134 @@
-# Personality Test API Documentation
+Petamimpi API
+This is a simple Express.js API for a personality quiz that calculates personality, talent, and interest based on user responses. The API provides endpoints to retrieve questions and perform calculations.
 
-### This API allows users to take a personality test and receive their personality type based on their responses. The test is based on a set of questions and provides a personality type based on the user's answers.
+Installation
+Clone the repository to your local machine:
 
-## Base URL
+bash
+Copy code
+git clone https://github.com/username/personality-quiz-api.git
+Navigate to the project directory:
 
-http://localhost:3000
+bash
+Copy code
+cd personality-quiz-api
+Install dependencies:
 
-## Endpoints
+bash
+Copy code
+npm install
+Running the Server
+Start the server by running:
 
-### 1. Get Questions
+bash
+Copy code
+npm start
+The server will run on http://localhost:3000.
 
-Endpoint
-GET /questions
+Endpoints
 
-Description
-Retrieve a list of personality test questions
+1. Calculate Talent
+   Endpoint: /calculate-talent
+   Method: POST
+   Request Body:
+   json
+   Copy code
+   {
+   "answers": ["ya", "tidak", "ya", "tidak", ...]
+   }
+   Response:
+   json
+   Copy code
+   {
+   "talent": {
+   "verbal": 25,
+   "matematis": 50,
+   "musikal": 75,
+   "kinestetik": 30,
+   "interpersonal": 40,
+   "intrapersonal": 60,
+   "spasial": 80,
+   "naturalistik": 45
+   }
+   }
+2. Get Talent Questions
+   Endpoint: /talent-questions
+   Method: GET
+   Response:
+   json
+   Copy code
+   {
+   "questions": ["Question 1", "Question 2", "Question 3", ...]
+   }
+3. Calculate Interest
+   Endpoint: /calculate-interest
+   Method: POST
+   Request Body:
+   json
+   Copy code
+   {
+   "answers": ["ya", "tidak", "ya", "tidak", ...]
+   }
+   Response:
+   json
+   Copy code
+   {
+   "interest": {
+   "social": 25,
+   "artistic": 50,
+   "investigative": 75,
+   "enterprising": 30,
+   "realistic": 40
+   }
+   }
+4. Get Interest Questions
+   Endpoint: /interest-questions
+   Method: GET
+   Response:
+   json
+   Copy code
+   {
+   "questions": ["Question 1", "Question 2", "Question 3", ...]
+   }
+5. Calculate Personality
+   Endpoint: /calculate-personality
+   Method: POST
+   Request Body:
+   json
+   Copy code
+   {
+   "responses": [1, 2, 3, 4, 5, ...]
+   }
+   Response:
+   json
+   Copy code
+   {
+   "personality": "ENTJ",
+   "title": "Commander",
+   "description": "Commanders are natural-born leaders...",
+   "famousPeople": ["Steve Jobs", "Margaret Thatcher"],
+   "image": "https://example.com/entj-image.jpg"
+   }
+6. Get All Questions
+   Endpoint: /questions
+   Method: GET
+   Response:
+   json
+   Copy code
+   {
+   "questions": ["Question 1", "Question 2", "Question 3", ...]
+   }
+   Usage
+7. Calculate Talent
+   To calculate talent, send a POST request to /calculate-talent with user answers. You can get talent questions using /talent-questions.
 
-Status Code: 200 OK
-Body:{
-"questions": [
-"Question 1",
-"Question 2",
-// ... (list of questions)
-"Question N"
-]
-}
+8. Calculate Interest
+   To calculate interest, send a POST request to /calculate-interest with user answers. You can get interest questions using /interest-questions.
 
-### 2. Calculate Personality
+9. Calculate Personality
+   To calculate personality, send a POST request to /calculate-personality with user responses. You can get all questions using /questions.
 
-Endpoint
-POST /calculate-personality
+Example Usage
+You can refer to the HTML file or use tools like Postman to interact with the API endpoints.
 
-Description
-Submit user responses to calculate their personality type.
-
-Request
-Method: POST
-Body:{
-"responses": [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, /* ... */]
-}
-Response
-Status Code: 200 OK
-Body:{
-"personality": "ISTJ",
-"personalityDescription": "ISTJ is a reliable, tough, and detail-oriented individual...",
-"famousPeople": ["George Washington", "Warren Buffett", "Angela Merkel"]
-}
-
-### 3. Get Response Scale
-
-Endpoint
-GET /response-scale
-
-Description
-Retrieve the response scale used in the personality test.
-
-Response
-Status Code: 200 OK
-Body:{
-"responseScale": ["1 (Not at all)", "2", "3", "4", "5 (Very Much)"]
-}
-
-## Example
-
-### Fetch Questions
-
-fetch('http://localhost:3000/questions')
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
-
-### Submit User Responses
-
-const userResponses = [/* user's responses array */];
-
-fetch('http://localhost:3000/calculate-personality', {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json',
-},
-body: JSON.stringify({ responses: userResponses }),
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
-
-### Fetch Response Scale
-
-fetch('http://localhost:3000/response-scale')
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
+Feel free to customize and adapt this README according to your project's specifics.

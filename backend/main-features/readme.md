@@ -1,31 +1,23 @@
-Petamimpi API
+# Petamimpi API
+
 This is a simple Express.js API for a personality quiz that calculates personality, talent, and interest based on user responses. The API provides endpoints to retrieve questions and perform calculations.
 
-Installation
+## Installation
+
 Clone the repository to your local machine:
+https://github.com/FaisalOnGit/CH2-PR632-Capstone.git
 
-bash
-Copy code
-git clone https://github.com/username/personality-quiz-api.git
-Navigate to the project directory:
+### npm install
 
-bash
-Copy code
-cd personality-quiz-api
-Install dependencies:
+### Running the Server
 
-bash
-Copy code
-npm install
-Running the Server
-Start the server by running:
+### Start the server by running:
 
-bash
-Copy code
-npm start
+### npm start
+
 The server will run on http://localhost:3000.
 
-Endpoints
+## Endpoints
 
 1. Calculate Talent
    Endpoint: /calculate-talent
